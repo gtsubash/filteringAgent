@@ -1,0 +1,20 @@
+{
+  "name": "6-stage-pipeline",
+  "description": "Orchestrates the 6-stage engineering pipeline: Planner -> Architect -> Developer -> Reviewer -> Tester -> Releaser for C++ DSP/CV tasks.",
+  "script": "pipeline.py",
+  "args": {
+    "type": "object",
+    "properties": {
+      "task": {
+        "type": "string",
+        "description": "The engineering task, feature, or bug fix to execute through the pipeline."
+      },
+      "max_review_cycles": {
+        "type": "integer",
+        "description": "Maximum review feedback cycles between developer and reviewer.",
+        "default": 2
+      }
+    },
+    "required": ["task"]
+  }
+}
